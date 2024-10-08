@@ -1,0 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --lightPurple: #8900FF;
+    --darkPurple: #5800A4;
+    --Black: #010C12;
+    --White: #f5f5f5;
+}
+
+/* Landing page*/
+
+.lPBody{
+    background: rgb(1,12,18);
+    background: linear-gradient(180deg, rgba(1,12,18,1) 0%, rgba(137,0,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
