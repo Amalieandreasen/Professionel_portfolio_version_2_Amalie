@@ -9,6 +9,12 @@
     box-sizing: border-box;
 }
 
+p{
+    line-height: 1.5;
+    font-family: var(--lexendMega);
+    color: var(--White);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -45,12 +51,10 @@ body{
 
 .lPText p{
 font-size: 50px;
-color: var(--White);
 line-height: 1.5;
 margin-left: 2rem;
 margin-right: 2rem;
 text-align: center;
-font-family: "Kode Mono", monospace;
 margin-top: -2rem;
 }
 
@@ -651,4 +655,84 @@ background: radial-gradient(circle, rgba(137,0,255,1) 0%, rgba(69,0,128,1) 100%)
 }
   }
 
-  
+  /* casestudies style */
+
+  .casestudieTal p{
+    color: var(--darkPurple);
+    font-size: 120px;
+    font-family: var(--lexendMega);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .casestudieHeading h4{
+    color: var(--White);
+    font-size: 30px;
+    font-family: var(--lexendMega);
+  }
+
+  .casestudieHeading p{
+    color: var(--White);
+    font-size: 20px;
+    font-family: var(--lexendMega);
+  }
+
+  .casestudieIntro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .casestudieDes p{
+margin-inline: 2rem;
+  }
+
+  .casestudieImg img{
+    width: 80%;
+    height: auto;
+    
+  }
+
+ .casestudie:nth-of-type(3) .casestudieImg img{
+    width: 40%;
+    height: auto;;
+  }
+
+
+  .casestudieImg{
+    background-image: url(../img/SVG/casestudie.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-block: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* casestudie media queries */
+
+  @media (min-width:768px){
+    .casestudie{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      
+    }
+
+    .casestudieImg{
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+
+    .casestudieDes{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .casestudie:nth-of-type(2) .casestudieImg{
+        grid-column: 1/2;
+    }
+
+    .casestudie:nth-of-type(2)  .casestudieDes{
+        grid-column:2/3 ;
+    }
+  }
