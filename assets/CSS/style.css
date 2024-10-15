@@ -433,7 +433,6 @@ font-size: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 3rem;
     }
 
     .contact hr{
@@ -441,7 +440,215 @@ font-size: 20px;
       }
 
   }
+
+  /* skills style */
+.headerSVG{
+    background-image: url(../img/SVG/globalSVG.svg);
+    background-position: top; 
+    background-size: 300%;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
+
+  .skillsIntro h1{
+   font-size: 40px;
+   color: var(--White);
+   font-family: var(--kodeMono);
+   text-align: center;
+  }
+
+  .skillsIntro h2{
+    font-size: 20px;
+    color: var(--White);
+    font-family: var(--lexendMega);
+    text-align: center;
+   }
+
+  .skill p{
+    color: var(--White);
+    font-family: var(--lexendMega);
+    text-align: center;
+  }
+
+  .skill span{
+    height: 25px;
+    width:100%;
+    background: rgb(137,0,255);
+background: radial-gradient(circle, rgba(137,0,255,1) 0%, rgba(69,0,128,1) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 74px 28px rgba(88,0,164,0.75);
+    z-index: -200;
+    margin-top: -2rem;
+  }
+
+.skill{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+}
+
+  .tekniskeF{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+    z-index: -200;
+  }
+
+  .tekniskeF h3{
+    color: white;
+    font-family: var(--lexendMega);
+    text-align: center;
+  }
+
+  .goal1, .goal2 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
   
+  .goalText {
+    color: white;
+    font-family: var(--lexendMega);
+    padding: 1rem;
+  }
   
+  .goalText h4 {
+    font-size: 25px;
+  }
+
+  .multimediedesigner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .multimediedesigner{
+    margin-top: 6rem;
+  }
+
+  .multimediedesignerMig h3{
+    color: white;
+    font-family: var(--lexendMega);
+    text-align: center;
+  }
+
+  .multimediedesignerMig{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    background-image: url(../img/SVG/multiemediedesigner.svg);
+    background-size: cover;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .point h4{
+    font-size: 25px;
+    color: var(--White);
+    font-family: var(--lexendMega);
+  }
+
+  .point p{
+    font-size: 20px;
+    color: var(--White);
+    font-family: var(--lexendMega);
+    text-align: center;
+    margin: 0;
+  }
+
+  .point{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin-top: 3rem;
+  }
+
+  /* skills media query */
+  
+  @media (min-width:768px){
+    .headerSVG{
+        background-size: 120%;
+    }
+
+    .goal1, .goal2{
+        flex-direction: row;
+        max-width: 100vw;
+    }
+
+    .goal2{
+        flex-direction: row-reverse;
+    }
+
+    .goalImg img{
+       object-fit: cover;
+       width: 400px;
+    }
+
+    .goal1 .goalText, .goal2 .goalText{
+        flex:1;
+    }
+
+    .goal1 .goalImg{
+        background-image: url(../img/goal1.png);
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    flex:1;
+    }
+
+ 
+     .goal2 .goalImg{
+         background-image: url(../img/goal2.png);
+     height: 400px;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat; 
+     flex:1;
+     }
+.tekniskRow{
+    display: flex;
+    align-items: flex-end;
+    gap: 5rem;
+}
+
+.skill{
+    max-width: 300px;
+    height: auto;
+}
+
+  }
+
+  @media (min-width:1024px){
+    .headerSVG{
+        background-size: 100%;
+
+    }
+.flex{
+    display: flex;
+    gap: 4rem;
+}
+
+.point{
+    width: 400px;
+}
+
+.skillsIntro h1{
+    font-size: 80px;
+}
+
+.skillsIntro h2{
+    font-size: 40px;
+    margin-top: -2rem;
+}
+  }
 
   
