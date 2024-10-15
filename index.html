@@ -6,10 +6,11 @@
     <meta name="descripton" content="" />
     <title>Amalie Andreasen</title>
     <link rel="stylesheet" href="./assets/CSS/style.css" />
-    <script src="./assets/app.js" defer></script>
+    <script src="./assets/JS/app.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
-  <body>
-    <main>
+  <body class="fadeOut">
+    <main id="app">
       <section class="lP">
         <section class="lPLogo">
           <img
@@ -23,10 +24,27 @@
           </p>
         </section>
         <section class="lPButtons">
-          <button>Jeg er klar</button>
-          <button>Jeg er ikke klar</button>
+          <button class="ready">Jeg er klar</button>
+          <button @click="showPopup = true">Jeg er ikke klar</button>
         </section>
       </section>
+      <div v-if="showPopup" class="popup">
+        <div class="popupContent">
+          <p>Er du helt sikker på at du ikke er klar?</p>
+          <button @click="showPopup = false">Luk</button>
+        </div>
+      </div>
     </main>
+    <script>
+      const { createApp, ref } = Vue;
+      const showPopup = ref(false);
+      createApp({
+        setup() {
+          return {
+            showPopup,
+          };
+        },
+      }).mount("#app");
+    </script>
   </body>
 </html>
