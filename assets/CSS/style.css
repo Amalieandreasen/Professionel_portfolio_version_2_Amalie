@@ -793,3 +793,50 @@ margin-inline: 2rem;
     }
 
   }
+
+  /* d'wine styles */
+
+  .skillsIntro button{
+    background-color:var(--Black);
+    color:var(--White);
+    padding: 1rem;
+    border-radius: 30px;
+    border: 1px solid var(--lightPurple);
+    font-size: 28px;
+    font-family: var(--lexendMega);
+    margin-bottom: 3rem;
+    cursor: pointer;
+  }
+
+  .skillsIntro button:hover{
+    background-color: var(--lightPurple);
+  }
+
+  .skillsIntro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .transition-swipe{
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+  }
+
+  html.is-animating .transition-swipe{
+    opacity:1;
+    transform: translateX(100%);
+  }
+
+  html.is-leaving .transition-swipe{
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  .arrow{
+    width: 50px;
+    background-color: white;
+  }
