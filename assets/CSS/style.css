@@ -802,7 +802,7 @@ margin-inline: 2rem;
     padding: 1rem;
     border-radius: 30px;
     border: 1px solid var(--lightPurple);
-    font-size: 28px;
+    font-size: 18px;
     font-family: var(--lexendMega);
     margin-bottom: 3rem;
     cursor: pointer;
@@ -819,24 +819,114 @@ margin-inline: 2rem;
     align-items: center;
   }
 
-  .transition-swipe{
+  .transition-swipe {
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(0);
     opacity: 1;
-    transition: 500ms;
-    transform: translateX(0);
-    transform-origin: left;
+    overflow-y: hidden;
   }
-
-  html.is-animating .transition-swipe{
-    opacity:1;
-    transform: translateX(100%);
-  }
-
-  html.is-leaving .transition-swipe{
+  
+  html.is-animating .transition-swipe {
     opacity: 0;
-    transform: translateX(0);
+    transform: translateY(-1em);
+  }
+  
+  html.is-leaving .transition-swipe {
+    transform: translateY(1em);
   }
 
   .arrow{
     width: 50px;
-    background-color: white;
   }
+
+  #swup p{
+    margin-inline: 2rem;
+  }
+
+  .dwineImg{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    flex-direction: column;
+    margin-inline: 2rem;
+  }
+
+  .dwineImg img{
+    width:100%;
+    height: auto;
+  }
+
+  .continueArrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: arrow 2s infinite;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+  }
+
+  @keyframes arrow {
+    0% {
+      transform: translateY(0%);
+    }
+  
+    50% {
+      transform: translateY(30%);
+    }
+  
+    100%{
+      transform: translateY(0%);
+    }
+  }
+
+  .dwineIntro{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dwineHeading h4{
+    color: var(--White);
+    font-size: 20px;
+    font-family: var(--lexendMega);
+  }
+
+  .dwineTal p{
+    color: var(--darkPurple);
+    font-size: 80px;
+    font-family: var(--lexendMega);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  @media (min-width:768px){
+    .dwineImg{
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+
+    .dwineImg img{
+        width: 45vw;
+    }
+  }
+
+  @media (min-width:1024px){
+    #swup p{
+        margin-inline: 8rem;
+      }
+
+      .dwineHeading h4{
+        font-size: 40px;
+
+      }
+    
+      .dwineTal p{
+        font-size: 120px;
+      }
+  }
+
+
+

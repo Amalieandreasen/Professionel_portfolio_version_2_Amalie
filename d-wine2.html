@@ -7,7 +7,6 @@
     <title>D'wine bar casestudie</title>
     <link rel="stylesheet" href="./assets/CSS/style.css" />
     <script src="./assets/JS/app.js" defer></script>
-    <script src="https://unpkg.com/swup@4"></script>
   </head>
   <body>
     <header>
@@ -32,11 +31,35 @@
         </section>
       </nav>
     </header>
-    <main id="swup" class="transition-fade">
-      <section class="forsideIntro">
-        <h1>fdhdjj</h1>
-        <h2>gdjfj</h2>
+    <main id="swup" class="transition-swipe">
+      <div class="dwineIntro">
+        <div class="dwineTal">
+          <p>1</p>
+        </div>
+        <div class="dwineHeading">
+          <h4>Forberedelse</h4>
+        </div>
+      </div>
+      <p>
+        Som forberedelse til vores eksamensprojekt startede vi med at planlægge
+        hele processen ved hjælp af en work breakdown structure. Herefter havde
+        vi et møde med vores virksomhed, hvorefter vi brugte MosCoW metoden til
+        at begrænse hvad vi skulle have med på hjemmesiden, og hvad vi ikke
+        skulle have med
+      </p>
+      <section class="dwineImg">
+        <img src="./assets/img/dwine/forberedelse1.png" alt="" />
+        <img src="./assets/img/dwine/forberedelse2.png" alt="" />
+      </section>
+      <section class="continueArrow">
+        <a href="./d-wine.html">
+          <img class="arrow" src="./assets/img/SVG/arrow.svg" alt="pil"
+        /></a>
       </section>
     </main>
+    <script type="module">
+      import Swup from "https://unpkg.com/swup@4?module";
+      const swup = new Swup();
+    </script>
   </body>
 </html>
