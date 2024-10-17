@@ -322,6 +322,10 @@ margin-bottom: 3rem;
     height: auto;
   }
 
+  form input{
+    color: white;
+  }
+
   .contactForm form{
     display: flex;
     flex-direction: column;
